@@ -1,0 +1,50 @@
+// Variables for easy customization
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-size-large: 2rem;
+$font-size-medium: 1.2rem;
+
+// Mixin for box shadow effect
+@mixin box-shadow($color) {
+  box-shadow: 0 4px 6px rgba($color, 0.1), 0 1px 3px rgba($color, 0.08);
+}
+
+// General styles for the empty page container
+.empty-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+
+  &__title {
+    font-size: $font-size-large;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: $font-size-medium;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    font-size: $font-size-medium;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    @include box-shadow(#000);
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
